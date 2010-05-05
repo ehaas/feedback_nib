@@ -1,0 +1,10 @@
+#feedback_nib
+  #feedback_nib_rel
+    %h1
+      %a{:href => '#', :class => "fontme"} Feedback
+    #feedback_slider
+      %p Thanks for your Feedback!
+      - form_tag feedback_path, :id => 'feedback_form' do
+        = text_area_tag :message
+        = submit_tag :Submit
+

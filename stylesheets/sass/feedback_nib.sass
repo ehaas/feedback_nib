@@ -1,0 +1,320 @@
+@import varmix.sass
+
+#feedback_nib 
+  position: fixed
+  bottom: 0px
+  right: 50px
+  
+  #feedback_nib_rel 
+    +leftbothrel
+    width: 300px
+    top: 3px
+    z-index: 10000
+    
+
+    h1
+      +rightboth
+      background: #ddd
+      width: 55px
+      padding: 4px 6px 10px
+      border: #ddd
+      +rounded(3px)
+      
+    > div
+      display: none
+      width: 300px
+      height: 195px
+      +leftbothrel
+      background: #ddd
+      top: -3px
+      padding-top: 20px
+      
+      p
+        font-size: 13px
+        +leftboth
+        +abs
+        margin-left: 10px
+        display: none
+        
+    textarea
+      +leftboth
+      width: 270px
+      height: 120px
+      margin: 0px 0 0 10px
+      line-height: 15px
+      font-size: 12px
+      padding: 4px
+      
+      
+    input[type="submit"]
+      +rightboth
+      border: 1px solid #000000
+      color: #fff
+      font-size: 13px
+      margin: 10px 10px 0 0 
+      padding: 2px 4px
+      +rounded(3px)
+      background: #000
+      cursor: pointer
+      
+      &:hover
+        background= !red
+        border-color= !red
+        
+        
+#feedback_wrap
+  width: 800px
+  text-align: center
+  margin: 50px auto
+  
+  h1
+    +left
+    font-size: 26px
+    +bold
+    margin: 0 0 25px 0
+  
+  #tabs
+    +leftboth
+    +hund
+    
+    li
+      +left
+      margin-right: 20px
+      
+      a
+        +left
+        +rounded(3px)
+        background: #ccc
+        padding: 5px 8px
+        font-size: 13px
+        color: #111
+        letter-spacing: .2px
+        
+      a:hover
+        color: #fff
+        background: #9a3233
+        
+        
+  
+  
+  ol
+    +leftboth
+    text-align: left
+    +hund
+    
+    li
+      +leftboth
+      +hund
+      padding: 20px 0 
+  
+      .meta
+        +left
+        width: 150px
+          
+        a
+          +left
+          +bold
+          font-size: 12px
+          padding-top: 2px
+          margin-bottom: 6px
+        
+          &:hover
+            color= !red
+            
+        p
+          +leftboth
+          color: #999
+          font-size: 11px
+
+      .content
+        width: 500px
+        +left
+        margin-left: 40px
+        
+        .message
+          +left
+          font-size: 13px
+          line-height: 16px
+          +hund
+          margin-bottom: 13px
+
+        label 
+          +left
+          font-size: 11px 
+          +bold
+          padding-top: 2px 
+    
+        input[type="checkbox"]
+          +left
+          margin: 0 6px 0 0
+    
+        select
+          +left
+          margin-left: 30px
+          font-size: 13px
+          padding: 1px 10px 0 0
+          +rel
+          top: -4px
+          
+          option
+            padding: 2px
+    
+    
+#error_wrap
+
+  width: 800px
+  margin: 0 auto
+  text-align: center
+
+  #error_header
+    +hund
+    +left
+    text-align: left
+    background= !red
+    height: 25px
+  
+    h1 a
+      color: #fff
+      
+
+  #error_main
+    +hund
+    +left
+    text-align: center
+    background= inline_image("error_bg.png")
+    height: 700px
+  
+    img
+      margin: 100px auto 0 auto
+      
+      
+.faq_wrap
+  width: 800px
+  margin: 0 auto
+  text-align: center      
+
+  h2
+    +leftboth
+    margin: 50px 0 11px 10px
+    font-size: 30px
+  
+  .explanation
+    +leftboth
+    width: 600px
+    font-size: 14px
+    line-height: 18px
+    text-align: left
+    margin-bottom: 40px
+    color: #555
+    
+  > ul
+    +leftbothrel
+    +hund
+    text-align: left
+    border-top: 1px solid #d9d9d9
+    padding-top: 35px
+    
+    li
+      +leftboth
+      +hund
+      margin: 0 0 30px 0px
+      border-bottom: 1px dotted #a9a9a9
+      padding-bottom: 20px
+      
+      span
+        color= !red
+        line-height: 15px
+        font-size: 13px
+        +abs
+        
+      h3
+        +left
+        color= !red
+        font-size: 13px
+        margin-bottom: 9px
+        width: 230px
+        padding: 0 60px 0 10px
+        line-height: 15px
+        
+        
+      p
+        +left
+        color: #000
+        font-size: 12px
+        line-height: 15px
+        width: 480px
+        padding-right: 20px
+    
+
+.faq_wrap  
+
+  #content_wrap
+    +leftboth
+    text-align: left
+    
+    h2
+      +leftboth
+      margin: 50px 0 26px 1px
+      font-size: 30px
+      color: #333
+      
+      span
+        +bold
+        color: #000
+
+    p.pre
+      +leftboth
+      color: #000
+      font-size: 12px
+      line-height: 15px
+      width: 760px
+      margin: 0 0 50px 10px
+      
+  
+    ul
+      +leftbothrel
+      +hund
+      text-align: left
+      border-top: 1px dotted #d9d9d9
+      padding-top: 35px
+
+      li
+        +leftboth
+        +hund
+        margin: 0 0 30px 0px
+        border-bottom: 1px dotted #a9a9a9
+        padding-bottom: 20px
+
+        span
+          color= !red
+          line-height: 15px
+          font-size: 13px
+          +abs
+
+        h3
+          +left
+          color= !red
+          font-size: 13px
+          margin-bottom: 9px
+          width: 200px
+          padding: 0 60px 0 10px
+          line-height: 15px
+
+
+        p
+          +left
+          color: #000
+          font-size: 12px
+          line-height: 15px
+          width: 510px
+          padding-right: 20px
+          
+          a
+            color: #777
+            text-decoration: underline
+
+            &:hover
+              color: #000
+    
+
+  
