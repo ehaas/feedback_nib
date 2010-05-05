@@ -1,7 +1,7 @@
 class FeedbackNibGenerator < Rails::Generator::Base
   def manifest
     record do |m|
-      m.migration_template 'migrate/feedback_nib_migration.rb', 'db/migrate'
+      m.migration_template 'migrate/feedback_nib.rb', 'db/migrate'
 
       m.file 'models/feedback_item.rb', 'app/models/feedback_item.rb'
 
