@@ -1,4 +1,4 @@
-class FeedbackNibMigration<%= version -%>< ActiveRecord::Migration
+class FeedbackNibMigration < ActiveRecord::Migration
   def self.up
     create_table :feedbacks, :force => true do |t|
       t.belongs_to :user
