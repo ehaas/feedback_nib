@@ -13,7 +13,7 @@ class FeedbacksController < ApplicationController
   def create
     if params[:message].present?
       f = FeedbackItem.new(:message => params[:message], :emailed => false, :category => 0)
-      current_user.feedbacks << f
+      current_user.feedback_items << f
     end
     head :ok
   end

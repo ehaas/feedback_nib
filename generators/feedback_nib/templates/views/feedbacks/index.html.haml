@@ -1,11 +1,6 @@
-%num_users
-  %p Users (approximate): #{User.rough_count}
-%num_feedbacks
-  %p Feedbacks (approximate): #{FeedbackItem.rough_count}
-
 #feedback_wrap
   
-  %h1 Teux Deux Feedback
+  %h1 Feedback
       
   %ul#tabs
     - FeedbackItem::Categories.each do |f|
