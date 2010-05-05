@@ -1,4 +1,4 @@
-render :partial => 'feedback/feedback_nib'
+render :partial => 'feedbacks/feedback_nib'
 
 routes.rb:
   site.resources :feedback, :only => [:index, :create, :update]

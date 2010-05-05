@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
       redirect_to root_path and return
     end
     if params[:category].blank?
-      redirect_to feedbacks_path(:category => Feedback::Categories.first)
+      redirect_to feedbacks_path(:category => FeedbackItem::Categories.first)
     end
     @feedback = FeedbackItem.paginate :include => :user, :page => params[:page], :order => 'updated_at DESC', :conditions => {:category => FeedbackItem::Categories.index(params[:category])}
   end
