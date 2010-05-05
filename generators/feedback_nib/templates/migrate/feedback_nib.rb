@@ -1,6 +1,6 @@
 class FeedbackNib < ActiveRecord::Migration
   def self.up
-    create_table :feedbacks, :force => true do |t|
+    create_table :feedback_items, :force => true do |t|
       t.belongs_to :user
       t.text :message, :default => '', :null => false
       t.boolean :processed, :default => false, :null => false
@@ -8,10 +8,10 @@ class FeedbackNib < ActiveRecord::Migration
       t.boolean :emailed, :default => false, :null => false
       t.timestamps
     end
-    add_index :feedbacks, :user_id
+    add_index :feedback_items, :user_id
   end
 
   def self.down
-    drop_table :feedbacks
+    drop_table :feedback_items
   end
 end
