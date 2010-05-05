@@ -1,6 +1,4 @@
 class FeedbackNibMigrationGenerator < Rails::Generator::Base
-  require 'feedback_nib'
-  
   def manifest
     record do |m|
       m.migration_template 'migrate/feedback_nib_migration.rb', 'db/migrate'
@@ -15,6 +13,6 @@ class FeedbackNibMigrationGenerator < Rails::Generator::Base
   end
 
   def file_name
-    "feedback_nib_migration_#{FeedbackNib.MAJOR_VERSION.gsub(".", "_")}"
+    "feedback_nib"
   end
 end
