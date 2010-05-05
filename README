@@ -1,0 +1,3 @@
+render :partial => 'feedback/feedback_nib'
+
+site.resources :feedback, :only => [:index, :create, :update]
