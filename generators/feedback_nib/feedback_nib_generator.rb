@@ -3,7 +3,7 @@ class FeedbackNibGenerator < Rails::Generator::Base
     record do |m|
       m.migration_template 'migrate/feedback_nib.rb', 'db/migrate'
       
-      m.file 'controllers/feedbacks_controller', 'app/controllers/feedbacks_controller.rb'
+      m.file 'controllers/feedbacks_controller.rb', 'app/controllers/feedbacks_controller.rb'
       m.file 'models/feedback_item.rb', 'app/models/feedback_item.rb'
 
       m.directory 'app/views/feedback'
