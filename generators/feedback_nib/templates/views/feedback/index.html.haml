@@ -1,0 +1,29 @@
+%num_users
+  %p Users (approximate): #{User.rough_count}
+%num_feedbacks
+  %p Feedbacks (approximate): #{FeedbackItem.rough_count}
+
+#feedback_wrap
+  
+  %h1 Teux Deux Feedback
+      
+  %ul#tabs
+    - FeedbackItem::Categories.each do |f|
+      %li= link_to f.humanize, feedbacks_path(:category => f), :class => 'tab'
+      
+  %ol.feedback_list
+    - @feedback.each do |f|
+      %li{:class => "category"}
+        .meta
+          - if f.user
+            = link_to h(f.user.login), "mailto:#{f.user.email}"
+          - else
+            Missing user! (ask Evan)
+          %p= f.created_at.strftime("%d %b %Y - %I:%M%p")
+        .content  
+          %p.message= h f.message
+          =check_box_tag "email_#{f.id}", 1, f.emailed?         
+          %label{:for => "email_#{f.id}"} Emailed 
+          %select{:id => "select_#{f.id}"}= options_for_select(FeedbackItem::Categories, FeedbackItem::Categories[f.category])
+          
+  = will_paginate @feedback

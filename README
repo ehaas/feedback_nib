@@ -1,3 +1,8 @@
 render :partial => 'feedback/feedback_nib'
 
-site.resources :feedback, :only => [:index, :create, :update]
+routes.rb:
+  site.resources :feedback, :only => [:index, :create, :update]
+
+user.rb: 
+  has_many :feedback_items
+  define a method called admin?
