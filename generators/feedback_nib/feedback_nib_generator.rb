@@ -1,4 +1,4 @@
-class FeedbackNibMigrationGenerator < Rails::Generator::Base
+class FeedbackNibGenerator < Rails::Generator::Base
   def manifest
     record do |m|
       m.migration_template 'migrate/feedback_nib_migration.rb', 'db/migrate'
@@ -9,6 +9,8 @@ class FeedbackNibMigrationGenerator < Rails::Generator::Base
       m.file 'views/feedback/_feedback_nib.html.haml', 'app/views/feedback/_feedback_nib.html.haml'
       m.file 'views/feedback/index.html.haml', 'app/views/feedback/_feedback_nib.html.haml'
       
+      m.file 'javascripts/feedback.js', 'public/javascripts/feedback.js'
+      m.file 'stylesheets/sass/feedback_nib.sass', 'public/stylesheets/sass/feedback_nib.sass'
     end
   end
 
